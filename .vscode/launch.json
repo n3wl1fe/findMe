@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Chrome Docker Launch",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "docker-run: debug",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "file:///usr/src/app/*": "${workspaceFolder}/*"
+            },
+            "postDebugTask": "docker-stop: debug"
+        },
+        {
+            "name": "Chrome Launch with Node Dev",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

@@ -1,6 +1,7 @@
 
 export default function Home() {
+  console.log('test1');
   return (
-    <div></div>
+    <div>Test</div>
   );
 }

@@ -1,5 +1,29 @@
 {
+  "name": "findme",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Starting development server...' && NODE_OPTIONS='--inspect=127.0.0.1:9229' next dev",
+    "build": "next build",
+    "start": "echo 'Starting production server...' && next start",
+    "lint": "next lint",
+    "test": "nvm -v"
+  },
   "dependencies": {
-    "@vis.gl/react-google-maps": "^1.5.2"
+    "@vis.gl/react-google-maps": "^1.5.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.0",
+    "@eslint/eslintrc": "^3"
   }
 }
