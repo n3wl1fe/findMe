@@ -6,7 +6,17 @@
             "request": "launch",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceFolder}",
-            "preLaunchTask": "npm run dev"
+            "preLaunchTask": "npm run dev",
+            "sourceMaps": true,
+            "presentation": {
+                "hidden": false,
+                "group": "",
+                "order": 1
+            },
+            "postDebugTask": "kill npm run dev",
+            "outFiles": [
+                "${workspaceFolder}/.next/**/*.js"
+            ]
         }
     ]
 }

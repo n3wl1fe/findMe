@@ -22,6 +22,15 @@
             ],
             "label": "npm run dev",
             "detail": "echo 'Starting development server...' && NODE_OPTIONS='--inspect=127.0.0.1:9229' next dev"
+        },
+        {
+            "label": "kill npm run dev",
+            "type": "shell",
+            "command": "kill -9 $(pgrep -f '^next-server') && rm -rf .next",
+            "presentation": {
+                "reveal": "never",
+                "panel": "dedicated"
+            }
         }
     ]
 }
