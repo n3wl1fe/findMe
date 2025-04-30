@@ -2,73 +2,26 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "docker-build",
-            "label": "docker-build: debug",
-            "platform": "node",
-            "dockerBuild": {
-                "dockerfile": "${workspaceFolder}/Dockerfile",
-                "context": "${workspaceFolder}",
-                "tag": "findme-dev",
-                "target": "dev",
-                "pull": true
-            }
-        },
-        {
-            "type": "docker-run",
-            "label": "docker-run: debug",
-            "dependsOn": [
-                "docker-build: debug"
-            ],
-            "dockerRun": {
-                "containerName": "findme-dev",
-                "image": "findme-dev",
-                "command": "npm run dev",
-                "ports": [
-                    {
-                        "containerPort": 3000,
-                        "hostPort": 3000
-                    },
-                    {
-                        "containerPort": 9229,
-                        "hostPort": 9229
-                    },
-                    {
-                        "containerPort": 9230,
-                        "hostPort": 9230
-                    }
-                ],
-                "remove": true,
-                "env": {
-                    "Debug": "*"
-                },
-                "customOptions": "--mount type=bind,source=\"${workspaceFolder}/.env\",target=/usr/src/app/.env,readonly --mount type=bind,source=\"${workspaceFolder}/app\",target=/usr/src/app/app"
-            },
-            "node": {
-                "enableDebugging": true
-            }
-        },
-        {
-            "type": "shell",
-            "label": "docker-stop: debug",
-            "command": "docker stop findme-dev"
-        },
-        {
-            "type": "shell",
-            "label": "dev-test",
-            "command": "npm run dev",
-            "isBackground": false,
-            "problemMatcher": {
-                "pattern": [],
-                "background": {
-                    "activeOnStart": true,
-                    "beginsPattern": {
-                        "regexp": "Starting development server"
-                    },
-                    "endsPattern": {
-                        "regexp": "Ready in"
+            "type": "npm",
+            "script": "dev",
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": [
+                {
+                    "base": "$tsc",
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": {
+                            "regexp": "Starting development server"
+                        },
+                        "endsPattern": {
+                            "regexp": "Ready in"
+                        }
                     }
                 }
-            }
+            ],
+            "label": "npm run dev",
+            "detail": "echo 'Starting development server...' && NODE_OPTIONS='--inspect=127.0.0.1:9229' next dev"
         }
     ]
 }
