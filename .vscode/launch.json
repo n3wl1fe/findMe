@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Chrome Launch with Node Dev",
+            "name": "npm run dev",
             "type": "chrome",
             "request": "launch",
             "url": "http://localhost:3000",
