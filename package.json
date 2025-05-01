@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "echo 'Starting development server...' && NODE_OPTIONS='--inspect=127.0.0.1:9229' next dev",
+    "dev": "echo 'Starting development server...' && NODE_OPTIONS='--inspect=127.0.0.1:9229' next dev --experimental-https",
     "build": "next build",
     "start": "echo 'Starting production server...' && next start",
     "lint": "next lint",
