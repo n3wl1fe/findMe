@@ -29,6 +29,9 @@
       ],
       "@features/*": [
         "./app/features/*"
+      ],
+      "@types": [
+        "./app/types/index.d.ts"
       ]
     }
   },
