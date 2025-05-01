@@ -26,6 +26,9 @@
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "@features/*": [
+        "./app/features/*"
       ]
     }
   },
