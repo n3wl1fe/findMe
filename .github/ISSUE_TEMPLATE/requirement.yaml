@@ -1,7 +1,7 @@
 name: Functional Requirement
 description: Create a functional requirement
 title: "[FR]: "
-labels: ["functional-requirement"]
+labels: ["functional requirement"]
 type: Functional Requirement
 assignees: freshmozart1
 projects: ["n3wl1fe/5"]
