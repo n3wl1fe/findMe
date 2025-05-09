@@ -1,0 +1,43 @@
+name: Functional Requirement
+description: Create a functional requirement
+title: "[FR]: "
+labels: ["functional-requirement"]
+type: Functional Requirement
+assignees: freshmozart1
+projects: ["n3wl1fe/5"]
+body:
+  - type:  textarea
+    attributes:
+      label: Description
+      description: Enter a detailed description of the functional requirement.
+      placeholder: "Describe the functional requirement..."
+    validations:
+      required: true
+  - type:  textarea
+    attributes:
+      label: Inputs
+      description: Enter the inputs for the functional requirement.
+      placeholder: "Describe the inputs..."
+    validations:
+      required: true
+  - type:  textarea
+    attributes:
+      label: Process
+      description: Enter the process for the functional requirement.
+      placeholder: "Describe the process..."
+    validations:
+      required: true
+  - type:  textarea
+    attributes:
+      label: Outputs
+      description: Enter the outputs for the functional requirement.
+      placeholder: "Describe the outputs..."
+    validations:
+      required: true
+  - type:  textarea
+    attributes:
+      label: Dependencies/Conditions
+      description: Enter the dependencies and conditions for the functional requirement.
+      placeholder: "Describe the dependencies and conditions..."
+    validations:
+      required: true
