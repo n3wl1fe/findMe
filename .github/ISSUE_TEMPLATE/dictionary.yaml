@@ -1,0 +1,11 @@
+name: Dictionary Entry
+description: Create a dictionary entry
+title: "[Dic]: "
+labels: ["dictionary"]
+projects: ["n3wl1fe/5"]
+body:
+  - type: textarea
+    attributes:
+      label: Definition
+      description: Enter the definition for the dictionary entry.
+      placeholder: "Describe the definition..."
